@@ -1,4 +1,4 @@
-package com.example.mynotecomposeapplication.data.source.local.entity.presentation.addnote
+package com.example.mynotecomposeapplication.presentation.addnote
 
 data class AddNoteUiState(
     val title :String = "",

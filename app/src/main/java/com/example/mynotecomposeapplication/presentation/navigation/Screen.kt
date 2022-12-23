@@ -1,4 +1,4 @@
-package com.example.mynotecomposeapplication.data.source.local.entity.presentation.navigation
+package com.example.mynotecomposeapplication.presentation.navigation
 
 import com.example.mynotecomposeapplication.util.Constants.Companion.LIST_NOTE_SCREEN
 import com.example.mynotecomposeapplication.util.Constants.Companion.UPDATE_NOTE_SCREEN

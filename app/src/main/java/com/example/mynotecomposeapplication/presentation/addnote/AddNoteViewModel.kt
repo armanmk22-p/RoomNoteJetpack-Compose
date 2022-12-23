@@ -1,4 +1,4 @@
-package com.example.mynotecomposeapplication.data.source.local.entity.presentation.addnote
+package com.example.mynotecomposeapplication.presentation.addnote
 
 import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
@@ -24,7 +24,7 @@ class AddNoteViewModel @Inject constructor(private val insertNoteUseCase: Insert
     val eventFlow = _eventFlow.asSharedFlow()
 
 
-            fun onEvent(event : AddNoteUserEvent){
+            fun onEvent(event :AddNoteUserEvent){
                 when(event){
 
                     is AddNoteUserEvent.EnteredTitle ->{
@@ -50,17 +50,13 @@ class AddNoteViewModel @Inject constructor(private val insertNoteUseCase: Insert
                                         description = addNote.value.description
                                     )
                                 )
-                                _eventFlow.emit(
-                                    AddNoteUiEvent.ShowSnackBar(
-                                        message = "Note Saved Successfully"
-                                    )
-                                )
+                                _eventFlow.emit(AddNoteUiEvent.ShowSnackBar(
+                                    message = "Note Saved Successfully"
+                                ))
                             }catch (e:Exception){
-                                _eventFlow.emit(
-                                    AddNoteUiEvent.ShowSnackBar(
-                                        message = e.localizedMessage ?: "Unknown Exception"
-                                    )
-                                )
+                                _eventFlow.emit(AddNoteUiEvent.ShowSnackBar(
+                                    message = e.localizedMessage?:"Unknown Exception"
+                                ))
                             }
 
                         }

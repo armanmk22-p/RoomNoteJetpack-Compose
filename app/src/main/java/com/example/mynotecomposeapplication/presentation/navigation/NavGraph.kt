@@ -1,4 +1,4 @@
-package com.example.mynotecomposeapplication.data.source.local.entity.presentation.navigation
+package com.example.mynotecomposeapplication.presentation.navigation
 
 import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.runtime.Composable

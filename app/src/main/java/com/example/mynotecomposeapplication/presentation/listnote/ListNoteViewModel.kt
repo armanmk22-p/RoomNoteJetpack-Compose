@@ -1,4 +1,4 @@
-package com.example.mynotecomposeapplication.data.source.local.entity.presentation.listnote
+package com.example.mynotecomposeapplication.presentation.listnote
 
 import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
@@ -29,7 +29,7 @@ class ListNoteViewModel @Inject constructor(private val getAllNotesUseCase: GetA
         getAllNotes()
     }
 
-    fun onEvent(event : ListNoteUserEvent){
+    fun onEvent(event :ListNoteUserEvent){
         when(event){
             is ListNoteUserEvent.AddNote ->{
                 //navigate to addNote Screen
@@ -46,11 +46,9 @@ class ListNoteViewModel @Inject constructor(private val getAllNotesUseCase: GetA
                     )
                 }
             }catch (e :Exception){
-                _eventFlow.emit(
-                    ListNoteUiEvent.ShowSnackBar(
-                        message = e.localizedMessage ?: "Unknown Error"
-                    )
-                )
+                _eventFlow.emit(ListNoteUiEvent.ShowSnackBar(
+                    message = e.localizedMessage?:"Unknown Error"
+                ))
             }
         }
     }

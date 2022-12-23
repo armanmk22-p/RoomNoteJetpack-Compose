@@ -1,4 +1,4 @@
-package com.example.mynotecomposeapplication.data.source.local.entity.presentation.updatenote
+package com.example.mynotecomposeapplication.presentation.updatenote
 
 import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
@@ -10,8 +10,8 @@ import com.example.mynotecomposeapplication.domain.repository.NoteRepository
 import com.example.mynotecomposeapplication.domain.usecase.GetNoteByIdUseCase
 import com.example.mynotecomposeapplication.domain.usecase.InsertNoteUseCase
 import com.example.mynotecomposeapplication.domain.usecase.UpdateNoteUseCase
-import com.example.mynotecomposeapplication.data.source.local.entity.presentation.addnote.AddNoteUiEvent
-import com.example.mynotecomposeapplication.data.source.local.entity.presentation.addnote.AddNoteUiState
+import com.example.mynotecomposeapplication.presentation.addnote.AddNoteUiEvent
+import com.example.mynotecomposeapplication.presentation.addnote.AddNoteUiState
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableSharedFlow

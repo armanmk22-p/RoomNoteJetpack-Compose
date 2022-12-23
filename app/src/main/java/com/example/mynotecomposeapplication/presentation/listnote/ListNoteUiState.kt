@@ -1,4 +1,4 @@
-package com.example.mynotecomposeapplication.data.source.local.entity.presentation.listnote
+package com.example.mynotecomposeapplication.presentation.listnote
 
 import com.example.mynotecomposeapplication.domain.model.Note
 

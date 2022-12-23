@@ -1,4 +1,4 @@
-package com.example.mynotecomposeapplication.data.source.local.entity.presentation.updatenote
+package com.example.mynotecomposeapplication.presentation.updatenote
 
 data class UpdateNoteUiState(
 
